@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-
 	bot := twitchbot.NewBot("oauth:abcdef", "mybot", []string{"channel"})
 
 	bot.OnMessage(func(bot *twitchbot.Bot, message *twitchbot.Message) {

@@ -132,13 +132,8 @@ func (bot *Bot) Run() {
 }
 
 func (bot *Bot) Start() error {
-	err := bot.client.Connect(bot.host)
-	if err != nil {
-		return err
-	}
-
 	defer bot.client.Close()
-	err = bot.client.Connect(bot.host)
+	err := bot.client.Connect(bot.host)
 	if err != nil {
 		return err
 	}
