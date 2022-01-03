@@ -71,7 +71,7 @@ func (event *EventHandler) configure(bot *Bot) {
 	bot.client.AddHandler("PRIVMSG", func(command *Command) bool {
 		message := ParseMessage(command, bot)
 		for _, handler := range event.messageHandlers {
-			handler(bot, message)
+			go handler(bot, message)
 		}
 		return true
 	})
