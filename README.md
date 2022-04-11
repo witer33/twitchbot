@@ -6,7 +6,7 @@ Go Twitch Bot Api wrapper, with an easy to use interface.
 package main
 
 import (
-	"twitch/twitchbot"
+	"github.com/witer33/twitchbot"
 )
 
 func main() {
